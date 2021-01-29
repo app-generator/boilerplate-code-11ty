@@ -7,7 +7,7 @@ const transforms = require('./utils/transforms.js')
 const shortcodes = require('./utils/shortcodes.js')
 const iconsprite = require('./utils/iconsprite.js')
 
-module.exports = function (config) {
+module.exports = function(config) {
     // Plugins
     config.addPlugin(pluginRss)
     config.addPlugin(pluginNavigation)
@@ -31,7 +31,7 @@ module.exports = function (config) {
     config.addNunjucksAsyncShortcode('iconsprite', iconsprite)
 
     // Asset Watch Targets
-    config.addWatchTarget('./src/assets')
+    config.addWatchTarget('./src/static')
 
     // Markdown
     config.setLibrary(
@@ -51,8 +51,7 @@ module.exports = function (config) {
     // Pass-through files
     config.addPassthroughCopy('src/robots.txt')
     config.addPassthroughCopy('src/site.webmanifest')
-    config.addPassthroughCopy('src/assets/images')
-    config.addPassthroughCopy('src/assets/fonts')
+    config.addPassthroughCopy('src/static')
 
     // Deep-Merge
     config.setDataDeepMerge(true)
@@ -66,6 +65,7 @@ module.exports = function (config) {
             layouts: 'layouts',
             data: 'data'
         },
+        passthroughFileCopy: true,
         templateFormats: ['njk', 'md', '11ty.js'],
         htmlTemplateEngine: 'njk',
         markdownTemplateEngine: 'njk'

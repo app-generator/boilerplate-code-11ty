@@ -4,7 +4,7 @@ title: An example post.
 
 # Blog Title
 
-> The most simple Blog post - edit this page.
+> The most simple Blog post - [edit this page](https://github.com/app-generator/boilerplate-code-11ty/blob/master/src/posts/sample.md).
 
 
 <br />

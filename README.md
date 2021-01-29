@@ -2,8 +2,10 @@
 
 > Eleventy (11ty) seed project - Features:
 
+<br />
+
 - UI Kit: **Pixel Lite** (Free Version) by **Themesberg**
-- Render Engine: Nunjunks
+- Render Engine: Nunjunks / Markdown (for blog posts)
 - CSS Pipeline (Sass, CleanCSS)
 - JS Bundling (Webpack)
 - SVG Icon Sprite Generation

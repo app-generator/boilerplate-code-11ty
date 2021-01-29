@@ -1,6 +1,7 @@
-const pluginRss = require('@11ty/eleventy-plugin-rss')
-const pluginNavigation = require('@11ty/eleventy-navigation')
-const markdownIt = require('markdown-it')
+const pluginRss = require('@11ty/eleventy-plugin-rss');
+const pluginNavigation = require('@11ty/eleventy-navigation');
+const markdownIt = require('markdown-it');
+const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
 const filters = require('./utils/filters.js')
 const transforms = require('./utils/transforms.js')
@@ -11,6 +12,11 @@ module.exports = function(config) {
     // Plugins
     config.addPlugin(pluginRss)
     config.addPlugin(pluginNavigation)
+
+    // Lazu=y load on images
+    module.exports = function(eleventyConfig) {
+        eleventyConfig.addPlugin(lazyImagesPlugin);
+    };
 
     // Filters
     Object.keys(filters).forEach((filterName) => {

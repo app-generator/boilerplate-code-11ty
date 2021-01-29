@@ -81,7 +81,8 @@ The project has a simple structure, represented as bellow:
    |
    |-- utils/                         # JS Helpers
    |
-   |-- run.py
+   |-- .eleventy.js                   # 11ty Config
+   |-- netlify.toml                   # Netlify deployer
    |
    |-- ************************************************************************
 ```
